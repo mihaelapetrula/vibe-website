@@ -326,18 +326,24 @@ export default function RezervariPage() {
         ════════════════════════════════ */}
         {pas === 'confirmat' && (
           <div className="bg-white rounded-2xl shadow-sm border border-gray-100 p-10 text-center">
-            <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-5 text-3xl">
-              ✓
+            <div className="w-16 h-16 bg-amber-50 rounded-full flex items-center justify-center mx-auto mb-5 text-3xl">
+              ☕
             </div>
-            <h2 className="text-2xl font-bold text-gray-900 mb-2">Rezervare confirmată!</h2>
-            <p className="text-gray-500 mb-1">{form.nume}</p>
-            <p className="text-gray-500 mb-1">{dataSelectata} · {oraSelectata}</p>
-            <p className="text-gray-500 mb-8">{form.numar_persoane} {form.numar_persoane === 1 ? 'persoană' : 'persoane'}</p>
+            <h2 className="text-2xl font-bold text-gray-900 mb-2">
+              Te așteptăm, {form.nume.split(' ')[0]}!
+            </h2>
+            <p className="text-gray-500 mb-6 text-base">
+              Locul tău e rezervat. Pregătim cafeaua, tu vino cu pofta.
+            </p>
+            <div className="bg-[#FAFAFA] rounded-xl px-6 py-4 mb-8 space-y-1 text-sm text-gray-600">
+              <p>📅 {dataSelectata} · 🕐 {oraSelectata}</p>
+              <p>👥 {form.numar_persoane} {form.numar_persoane === 1 ? 'persoană' : 'persoane'}</p>
+            </div>
             <button
               onClick={rezervareNoua}
               className="px-8 py-3 rounded-xl bg-[#C4956A] hover:bg-[#A0724A] text-white font-semibold transition-all hover:scale-105"
             >
-              Rezervare nouă
+              Fă o altă rezervare
             </button>
           </div>
         )}
