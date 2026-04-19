@@ -199,6 +199,7 @@ export default function AdminRezervariTable({
                   </th>
                   <th className="text-center px-5 py-3 font-medium">Pers.</th>
                   <th className="text-left px-5 py-3 font-medium">Status</th>
+                  <th className="text-left px-5 py-3 font-medium">Înregistrată</th>
                   <th className="text-center px-5 py-3 font-medium">Sosit</th>
                   <th className="text-right px-5 py-3 font-medium">Acțiuni</th>
                 </tr>
@@ -226,6 +227,10 @@ export default function AdminRezervariTable({
                         <span className={`text-xs font-medium px-2.5 py-1 rounded-full border ${cfg.badge}`}>
                           {cfg.label}
                         </span>
+                      </td>
+                      <td className="px-5 py-4 text-gray-500">
+                        <div className="text-xs">{new Date(r.created_at).toLocaleDateString('ro-RO')}</div>
+                        <div className="text-xs text-gray-400">{new Date(r.created_at).toLocaleTimeString('ro-RO', { hour: '2-digit', minute: '2-digit' })}</div>
                       </td>
                       <td className="px-5 py-4 text-center">
                         <button
