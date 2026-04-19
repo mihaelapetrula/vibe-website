@@ -180,7 +180,7 @@ export default function AdminRezervariTable({
       ) : (
         <>
           {/* ── TABEL desktop ── */}
-          <div className="hidden md:block bg-white/70 backdrop-blur-md border border-gray-100 rounded-2xl shadow-sm overflow-hidden">
+          <div className="hidden md:block bg-white/70 backdrop-blur-md border border-gray-100 rounded-2xl shadow-sm overflow-x-auto">
             <table className="w-full text-sm">
               <thead>
                 <tr className="border-b border-gray-100 text-xs text-gray-400 uppercase tracking-wide">
